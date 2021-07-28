@@ -1,3 +1,7 @@
+#find-body {
+  height: 500vh;
+}
+
 .recommend-friends {
   margin: 15px 0px;
   padding: 20px 0px;
@@ -97,6 +101,26 @@
   font-size: 12px;
 }
 
-.open-post__heart-count {
+.open-post__heart-count span {
   margin-left: 3px;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
 }
